@@ -1,0 +1,59 @@
+/*
+MOBILE
+Braikpoints - 480px
+Frame - 428px
+Container - 428px (396px + p16px + p16px)
+Padding - 16px + 16px
+
+TABLET
+Braikpoints - 768px
+Frame - 768px
+Container - 768px (736px +p16px + p16px)
+Padding - 16px + 16px
+
+PC
+Braikpoints - 1200px
+Frame - 1440px
+Container - 1158px
+Padding - 15px + 15px
+
+*/
+
+/* Basic Styles */
+.container {
+  min-width: 320px;
+  max-width: 428px;
+  padding: 0 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
+/* Mobile screen >=480px */
+@media only screen and (min-width: 480px) {
+  .container {
+    max-width: 428px;
+  }
+}
+
+/* Tablet screen >=768px */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* PC scren >=1200px */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (min-width: minwidthpx) and (max-width: maxwidthpx) {
+   {
+  }
+}

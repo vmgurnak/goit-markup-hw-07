@@ -30,7 +30,7 @@
    <header class="header">
       <div class="header-container container">
          <nav class="header-nav">
-            <a class="logo link" href="./index.html">Web<span class="logo-dark">Studio</span></a>
+            <a class="header-logo logo link" href="./index.html">Web<span class="logo-dark">Studio</span></a>
             <ul class="header-nav-list list">
                <li class="header-nav-item">
                   <a class="header-nav-link link active" href="./index.html">Studio</a>
@@ -42,7 +42,20 @@
                   <a class="header-nav-link link" href="">Contacts</a>
                </li>
             </ul>
+
+            <!-- <button class="menu-btn is-open" type="button" aria-expanded="false" aria-controls="menu-container"
+               data-menu-button>
+               <svg class="" width="" height="" aria-label="Переключатель мобильного меню">
+                  <use class="icon-cross" href=""></use>
+                  <use class="icon-menu" href=""></use>
+               </svg>
+            </button>
+
+            <div class="mobile-menu" id="menu-container" data-menu>
+            </div> -->
+
          </nav>
+
          <address class="header-address">
             <ul class="header-address-list list">
                <li class="header-address-item">
@@ -55,6 +68,7 @@
             </ul>
          </address>
       </div>
+
    </header>
 
    <main>
@@ -385,9 +399,8 @@
    <!-- ----------------FOOTER--------------- -->
 
    <footer class="footer">
-      <div class="footer-container container">
 
-         <!-- Footer-title -->
+      <div class="footer-container container">
 
          <div class="footer-title">
             <a class="footer-logo logo link" href="./index.html">Web<span class="logo-light">Studio</span></a>
@@ -395,8 +408,6 @@
                growth
                solutions.</p>
          </div>
-
-         <!-- Footer-socil -->
 
          <div class="footer-social">
             <p class="footer-social-title footer-text-title">Social media</p>
@@ -435,11 +446,8 @@
                </li>
             </ul>
 
-            <!-- Footer form -->
-
          </div>
 
-         <!-- Footer-form -->
          <form class="subscribe-form" name="subscribe_form" autocomplete="on" method="get">
             <p class="footer-form-title footer-text-title">
                Subscribe
@@ -467,7 +475,9 @@
 
    <!-- MODAL WINDOW -->
 
-   <div class="backdrop is-hidden" data-modal>
+   <div class="backdrop" data-modal>
+
+      <!--------- Modal window --------->
       <div class="modal">
          <button class="modal-close-btn" type="button" data-modal-close>
             <svg class="modal-close-icon" width="8" height="8">
