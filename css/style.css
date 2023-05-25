@@ -67,6 +67,7 @@ ul {
 button {
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 img {
@@ -222,7 +223,7 @@ body {
   padding-bottom: 24px;
 } */
 
-/* Navigation */
+/* Header Navigation */
 
 .header-nav {
   display: flex;
@@ -317,7 +318,7 @@ body {
   background-color: var(--ocean);
 }
 
-/* Address */
+/* Header-address */
 
 .header-address {
   display: none;
@@ -372,28 +373,76 @@ body {
 
 /* Header burger menu */
 
-/* .menu-btn {
+.menu-toggle {
+  margin-left: auto;
+  background-color: transparent;
 }
 
-.menu-btn .icon-cross {
-  display: none;
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 
-.menu-btn.is-open .icon-cross {
-  display: block;
+@media only screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
 }
 
-.menu-btn.is-open .icon-menu {
-  display: none;
+.menu-toggle-icon {
+  /* fill: var(--navy-blue); */
+  stroke: var(--navy-blue);
 }
 
-.icon-cross {
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
 }
-.icon-menu {
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
 }
 
 .mobile-menu {
-} */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
 
 /* ----------------HERO--------------- */
 
@@ -1035,7 +1084,7 @@ body {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 
-  max-width: 392px;
+  width: calc(100% - 36px);
   min-height: 576px;
 
   background: var(--dairy);
@@ -1049,14 +1098,12 @@ body {
 @media only screen and (min-width: 480px) {
   .modal {
     width: 392px;
-    max-width: none;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .modal {
     width: 408px;
-    max-width: none;
   }
 }
 
