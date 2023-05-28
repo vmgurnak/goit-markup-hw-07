@@ -35,9 +35,9 @@ html {
   --anim-overlay: 300ms ease-in;
 
   /* Adaptive */
-  --mob-width: 480px;
+  --mob-width: 428px;
   --tablet-width: 768px;
-  --pc-width: 1200px;
+  --pc-width: 1158px;
 
   --count-advanteges: 4;
 }
@@ -70,10 +70,14 @@ button {
   background-color: transparent;
 }
 
+/* Responsive images */
 img {
   display: block;
   max-width: 100%;
   height: auto;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 .link {
@@ -95,29 +99,22 @@ img {
 /* -----------CONTAINER------------ */
 
 .container {
+  max-width: 428px;
+
   padding: 0 16px;
   margin-left: auto;
   margin-right: auto;
-
-  outline: 2px solid red;
-  outline-offset: -2px;
-}
-
-@media only screen and (min-width: 480px) {
-  .container {
-    width: 428px;
-  }
 }
 
 @media only screen and (min-width: 768px) {
   .container {
-    min-width: 768px;
+    max-width: 768px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .container {
-    width: 1158px;
+    max-width: 1158px;
     padding: 0 15px;
   }
 }
@@ -135,7 +132,7 @@ body {
   padding-bottom: 96px;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -251,19 +248,11 @@ body {
   align-items: center;
 }
 
-/* .header a {
-  padding-top: 24px;
-  padding-bottom: 24px;
-} */
-
 /* Header Navigation */
 
 .header-nav {
   display: flex;
   align-items: center;
-
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
 .header-logo {
@@ -284,7 +273,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .header-logo {
     margin-right: 76px;
   }
@@ -355,9 +344,6 @@ body {
 
 .header-address {
   display: none;
-
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -384,7 +370,7 @@ body {
   transition: color var(--anim);
 }
 
-@media only screen and (max-width: 1199.9px) {
+@media only screen and (max-width: 1157.9px) {
   .header-address-link {
     font-size: 12px;
     line-height: 1.17;
@@ -392,7 +378,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .header-address-link {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -463,6 +449,7 @@ body {
 @media only screen and (min-width: 428px) {
   .menu-container.is-open {
     width: 428px;
+    max-height: 796px;
   }
 }
 
@@ -480,11 +467,17 @@ body {
 
 .mobile-menu-link {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--navy-blue);
+}
+
+@media only screen and (min-width: 428px) {
+  .mobile-menu-link {
+    font-size: 36px;
+  }
 }
 
 .mobile-menu-link:hover,
@@ -516,11 +509,17 @@ body {
 
 .mobile-contacts-tel {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--slate);
+}
+
+@media only screen and (min-width: 428px) {
+  .mobile-contacts-tel {
+    font-size: 36px;
+  }
 }
 
 .mobile-contacts-mail {
@@ -535,7 +534,13 @@ body {
 
 .mobile-menu-icons {
   justify-content: flex-start;
-  gap: 56px;
+  gap: 25px;
+}
+
+@media only screen and (min-width: 428px) {
+  .mobile-menu-icons {
+    gap: 56px;
+  }
 }
 
 .mobile-menu-icons .icons-link:hover,
@@ -588,12 +593,9 @@ body {
 }
 
 .hero {
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero/people-office.jpg);
-  background-color: var(--navy-blue);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   max-width: 1440px;
   padding-top: 112px;
@@ -601,12 +603,77 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  /* Mobile screen */
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/hero-bg_mob@1x.jpg);
+  background-color: var(--navy-blue);
 }
 
-@media only screen and (min-width: 1200px) {
+/* retina mobile screen */
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-bg_mob@2x.jpg);
+  }
+}
+
+/* Tablet screen */
+@media only screen and (min-width: 429px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-bg_tab@1x.jpg);
+  }
+
+  /* retina tablet screen */
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/hero-bg_tab@2x.jpg);
+    }
+  }
+}
+
+/* Desktop screen */
+@media only screen and (min-width: 769px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-bg_pc@1x.jpg);
+  }
+
+  /* retina desktop screen */
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/hero-bg_pc@2x.jpg);
+    }
+  }
+}
+
+@media only screen and (min-width: 1158px) {
   .hero {
     padding-top: 188px;
     padding-bottom: 188px;
@@ -639,7 +706,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .hero-title {
     margin-bottom: 48px;
   }
@@ -677,7 +744,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .advantages-item {
     flex-basis: calc((100% - 24px * 3) / 4);
   }
@@ -687,7 +754,7 @@ body {
   display: none;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .advatages-icon-wrapper {
     display: flex;
     justify-content: center;
@@ -720,7 +787,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .advantages-subtitle {
     font-weight: 500;
     font-size: 20px;
@@ -734,7 +801,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .advantages-descr {
     font-weight: 400;
   }
@@ -747,7 +814,7 @@ body {
   display: none;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .projects {
     display: block;
   }
@@ -941,11 +1008,10 @@ body {
 @media only screen and (min-width: 768px) {
   .footer-container {
     justify-content: flex-start;
-    /* padding-left: 108px; */
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1199.9px) {
+@media only screen and (min-width: 768px) and (max-width: 1157.9px) {
   .footer-container {
     padding-left: 108px;
   }
@@ -954,8 +1020,6 @@ body {
 /* ----------Footer-title---------- */
 
 .footer-title {
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -964,7 +1028,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .footer-title {
     margin-right: 120px;
   }
@@ -993,11 +1057,9 @@ body {
 /* ---------Footer-socil--------- */
 
 .footer-social {
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .footer-social {
     margin-right: 80px;
   }
@@ -1017,9 +1079,6 @@ body {
 
 .subscribe-form {
   width: 100%;
-
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1045,9 +1104,6 @@ body {
   justify-content: center;
   row-gap: 16px;
   column-gap: 24px;
-
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1171,7 +1227,7 @@ body {
   transition: transform var(--anim-modal), opacity var(--anim-modal);
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 428px) {
   .modal {
     width: 392px;
   }
@@ -1379,7 +1435,22 @@ body {
 /* ----------------PORTFOLIO--------------- */
 
 .portfolio {
-  padding-top: 96px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .portfolio {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
 }
 
 .portfolio-container {
@@ -1390,17 +1461,33 @@ body {
 
 .portfolio-list {
   display: flex;
-  gap: 24px;
-  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 16px;
+  justify-content: flex-start;
 
-  margin-bottom: 72px;
+  width: 270px;
+  margin-bottom: 48px;
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio-list {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .portfolio-list {
+    margin-bottom: 72px;
+  }
 }
 
 .portfolio-list-item {
 }
 
 .portfolio-btn {
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -1410,10 +1497,18 @@ body {
   border: 1px solid var(--cornflower);
   border-radius: 4px;
 
-  padding: 12px 24px;
+  height: 40px;
+  padding: 8px 16px;
 
   transition: color var(--anim), background-color var(--anim),
     border-color var(--anim), box-shadow var(--anim);
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio-btn {
+    padding: 12px 24px;
+    height: 48px;
+  }
 }
 
 .portfolio-btn:hover,
@@ -1428,8 +1523,22 @@ body {
 .portfolio-projects {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   row-gap: 48px;
   column-gap: 24px;
+}
+
+/* @media only screen and (min-width: 768px) {
+  .portfolio-projects {
+    row-gap: 72px;
+  }
+} */
+
+@media only screen and (min-width: 768px) and (max-width: 1157.9px) {
+  .portfolio-projects {
+    justify-content: flex-start;
+    row-gap: 72px;
+  }
 }
 
 .portfolio-projects-item {

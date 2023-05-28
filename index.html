@@ -6,27 +6,22 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="description" content="WebStudio. Effective Solutions for Your Business">
-
    <title>WebStudio</title>
-
    <!-- Fonts styles -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet">
-
    <!-- Modern-normalize -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous" referrerpolicy="no-referrer">
-
    <!-- Custom styles -->
    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-
    <header class="header">
       <div class="header-container container">
          <nav class="header-nav">
@@ -43,44 +38,33 @@
                </li>
             </ul>
          </nav>
-
          <address class="header-address">
             <ul class="header-address-list list">
                <li class="header-address-item">
                   <a class="header-address-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                </li>
                <li class="header-address-item">
-                  <a class="header-address-link link" href="tel:+110001111111">+11 (000)
-                     111-11-11</a>
+                  <a class="header-address-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
                </li>
             </ul>
          </address>
-
          <!-- Button mobile-menu -->
-
          <button class="mobile-menu-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="mobile-menu-icon" width="32" height="22">
                <use href="./images/icons.svg#menu-burger"></use>
             </svg>
          </button>
-
       </div>
-
    </header>
-
    <main>
-
       <!-- HERO -->
-
       <section class="hero section">
          <div class="hero-container container">
             <h1 class="hero-title">Effective Solutions for Your Business</h1>
             <button class="hero-btn btn" type="button" data-modal-open>Order Service</button>
          </div>
       </section>
-
       <!-- ADVANTEGES -->
-
       <section class="advantages section">
          <div class="advantages-container container">
             <h2 class="advantages-title-hidden visually-hidden">Our advantages</h2>
@@ -92,8 +76,8 @@
                      </svg>
                   </div>
                   <h3 class="advantages-subtitle">Strategy</h3>
-                  <p class="advantages-descr">Our goal is to identify the business
-                     problem to walk away with the perfect and creative solution.</p>
+                  <p class="advantages-descr">Our goal is to identify the business problem to walk away with the perfect
+                     and creative solution.</p>
                </li>
                <li class="advantages-item">
                   <div class="advatages-icon-wrapper">
@@ -103,9 +87,7 @@
                   </div>
                   <h3 class="advantages-subtitle">Punctuality</h3>
                   <p class="advantages-descr">Bring the key message to the brand's audience for the best price within
-                     the
-                     shortest possible time.
-                  </p>
+                     the shortest possible time. </p>
                </li>
                <li class="advantages-item">
                   <div class="advatages-icon-wrapper">
@@ -115,8 +97,7 @@
                   </div>
                   <h3 class="advantages-subtitle">Diligence</h3>
                   <p class="advantages-descr">Research and confirm brands that present the strongest digital growth
-                     opportunities and minimize risk.
-                  </p>
+                     opportunities and minimize risk. </p>
                </li>
                <li class="advantages-item">
                   <div class="advatages-icon-wrapper">
@@ -126,15 +107,12 @@
                   </div>
                   <h3 class="advantages-subtitle">Technologies</h3>
                   <p class="advantages-descr">Design practice focused on digital experiences. We bring forth a deep
-                     passion
-                     for problem-solving.</p>
+                     passion for problem-solving.</p>
                </li>
             </ul>
          </div>
       </section>
-
       <!-- PROJECTS -->
-
       <section class="projects section">
          <div class="projects-container container">
             <h2 class="projects-title">What are we doing</h2>
@@ -154,15 +132,20 @@
             </ul>
          </div>
       </section>
-
       <!-- TEAM -->
-
       <section class="team section">
          <div class="team-container container">
             <h2 class="team-title">Our Team</h2>
             <ul class="team-list list">
                <li class="team-item">
-                  <img class="team-img" src="./images//team/mark-guerrero.jpg" alt="Mark Guerrero" width="264">
+                  <img 
+                  class="team-img" 
+                  srcset="./images/team/team-img1@1x.jpg 1x, ./images/team/team-img1@2x.jpg 2x"
+                  src="./images/team/team-img1@1x.jpg" 
+                  alt="Mark Guerrero Product Designer" 
+                  width="264"
+                  height="260"
+                  >
                   <div class="team-member">
                      <h3 class="team-subtitle">Mark Guerrero</h3>
                      <p class="team-descr">Product Designer</p>
@@ -203,7 +186,13 @@
                   </div>
                </li>
                <li class="team-item">
-                  <img class="team-img" src="./images//team/tom-ford.jpg" alt="Tom Ford Frontend Develope" width="264">
+                  <img 
+                  class="team-img" 
+                  srcset="./images/team/team-img2@1x.jpg 1x, ./images/team/team-img2@2x.jpg 2x" 
+                  src="./images/team/team-img2@1x.jpg" 
+                  alt="Tom Ford Frontend Developer" 
+                  width="264"
+                  height="260">
                   <div class="team-member">
                      <h3 class="team-subtitle">Tom Ford</h3>
                      <p class="team-descr">Frontend Developer</p>
@@ -241,12 +230,17 @@
                            </a>
                         </li>
                      </ul>
-
                   </div>
                </li>
                <li class="team-item">
-                  <img class="team-img" src="./images//team/camila-garcia.jpg" alt="Camila Garcia Marketing"
-                     width="264">
+                  <img 
+                  class="team-img" 
+                  srcset="./images/team/team-img3@1x.jpg 1x, ./images/team/team-img3@2x.jpg 2x" 
+                  src="./images/team/team-img3@1x.jpg" 
+                  alt="Camila Garcia Marketing" 
+                  width="264"
+                  height="260"
+                  >
                   <div class="team-member">
                      <h3 class="team-subtitle">Camila Garcia</h3>
                      <p class="team-descr">Marketing</p>
@@ -287,8 +281,14 @@
                   </div>
                </li>
                <li class="team-item">
-                  <img class="team-img" src="./images//team/daniel-wilson.jpg" alt="Daniel Wilson UI Designer"
-                     width="264">
+                  <img 
+                  class="team-img" 
+                  srcset="./images/team/team-img4@1x.jpg 1x, ./images/team/team-img4@2x.jpg 2x" 
+                  src="./images/team/team-img4@1x.jpg" 
+                  alt="Daniel Wilson UI Designer" 
+                  width="264"
+                  height="260"
+                  >
                   <div class="team-member">
                      <h3 class="team-subtitle">Daniel Wilson</h3>
                      <p class="team-descr">UI Designer</p>
@@ -331,9 +331,7 @@
             </ul>
          </div>
       </section>
-
       <!-- CUSTOMERS -->
-
       <section class="section customers section">
          <div class="customers-container container">
             <h2 class="customers-title">Customers</h2>
@@ -389,23 +387,15 @@
             </ul>
          </div>
       </section>
-
-
    </main>
-
    <!-- ----------------FOOTER--------------- -->
-
    <footer class="footer">
-
       <div class="footer-container container">
-
          <div class="footer-title">
             <a class="footer-logo logo link" href="./index.html">Web<span class="logo-light">Studio</span></a>
             <p class="footer-descr">Increase the flow of customers and sales for your business with digital marketing &
-               growth
-               solutions.</p>
+               growth solutions.</p>
          </div>
-
          <div class="footer-social">
             <p class="footer-social-title footer-text-title">Social media</p>
             <ul class="footer-social-list icons-list">
@@ -438,38 +428,24 @@
                   </a>
                </li>
             </ul>
-
          </div>
-
          <form class="subscribe-form" name="subscribe_form" autocomplete="on" method="get">
-            <p class="footer-form-title footer-text-title">
-               Subscribe
-            </p>
-
+            <p class="footer-form-title footer-text-title"> Subscribe </p>
             <label class="subscribe-label">
                <input class="subscribe-email" type="email" name="user_email" placeholder="E-mail" required
                   title="Please enter your e-mail">
-
                <div class="subscribe-button-wrapper">
-                  <button class="subscribe-form-button" type="submit">
-                     Subscribe
-                  </button>
+                  <button class="subscribe-form-button" type="submit"> Subscribe </button>
                   <svg class="subscribe-form-icon" width="24" height="24">
                      <use href="./images/icons.svg#subscribe-icon"></use>
                   </svg>
-
                </div>
             </label>
          </form>
       </div>
-
    </footer>
-
-
    <!-- ------------MODAL WINDOW------------ -->
-
    <div class="backdrop is-hidden" data-modal>
-
       <!--------- Modal window --------->
       <div class="modal">
          <button class="modal-close-btn" type="button" data-modal-close>
@@ -477,12 +453,9 @@
                <use href="./images/icons.svg#modal-close"></use>
             </svg>
          </button>
-
          <!--------- Modal form --------->
-
          <form class="modal-form">
             <p class="modal-form-tittle">Leave your contacts and we will call you back</p>
-
             <label class="modal-label" for="modal_name">Name</label>
             <div class="modal-input-wrapper">
                <input class="modal-input" type="text" name="modal_name" id="modal_name" required minlength="3"
@@ -491,7 +464,6 @@
                   <use href="./images/icons.svg#modal-name"></use>
                </svg>
             </div>
-
             <label class="modal-label" for="modal_phone">Phone</label>
             <div class="modal-input-wrapper">
                <input class="modal-input" type="tel" name="modal_phone" id="modal_phone" title="Please enter your phone"
@@ -499,12 +471,10 @@
                <!-- <input class="modal-input" type="tel" name="modal_phone" id="modal_phone"
                   title="Please enter your phone +38 (067) 555-55-55" required
                   pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"> -->
-
                <svg class=" modal-icon" width="18" height="24">
                   <use href="./images/icons.svg#modal-phone"></use>
                </svg>
             </div>
-
             <label class="modal-label" for="modal_email">Email</label>
             <div class="modal-input-wrapper">
                <input class="modal-input" type="email" name="modal_email" id="modal_email"
@@ -513,12 +483,9 @@
                   <use href="./images/icons.svg#modal-email"></use>
                </svg>
             </div>
-
             <label class="modal-label" for="modal_comment">Comment</label>
-
             <textarea class="modal-comment" name="" id="modal_comment" cols="" rows="5"
                placeholder="Text input"></textarea>
-
             <label class="modal-agreement">
                <div class="modal-agreement-wrapper">
                   <input class="modal-agreement-input" type="checkbox" name="modal_agreement">
@@ -526,30 +493,22 @@
                      <use href="./images/icons.svg#modal-check"></use>
                   </svg>
                </div>
-
                <span class="modal-agreement-text">I accept the terms and conditions of the <a
                      class="modal-agreement-link" href="" target="_blank" rel="noopener noreferrer nofollow">Privacy
                      Policy</a></span>
             </label>
-
             <button class="btn" type="submit">Send</button>
          </form>
-
       </div>
    </div>
-
-
    <!-- ------------MOBILE-MENU----------- -->
-
    <div class="menu-container js-menu-container" id="mobile-menu">
       <button class="burger-close-btn js-close-menu">
          <svg class="burger-close-icon" width="8" height="8">
             <use href="./images/icons.svg#modal-close"></use>
          </svg>
       </button>
-
       <!-- Mobile menu list -->
-
       <ul class="mobile-menu">
          <li class="mobile-menu-item">
             <a class="mobile-menu-link" href="./index.html">Studio</a>
@@ -561,21 +520,16 @@
             <a class="mobile-menu-link" href="">Contacts</a>
          </li>
       </ul>
-
       <!-- Mobile menu contacts -->
-
       <ul class="mobile-contacts">
          <li class="mobile-contacts-item">
-            <a class="mobile-contacts-link mobile-contacts-tel" href="tel:+110001111111">+11 (000)
-               111-11-11</a>
+            <a class="mobile-contacts-link mobile-contacts-tel" href="tel:+110001111111">+11 (000) 111-11-11</a>
          </li>
          <li class="mobile-contacts-item">
             <a class="mobile-contacts-link mobile-contacts-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
          </li>
       </ul>
-
       <!-- Mobile menu social icons -->
-
       <ul class="icons-list mobile-menu-icons">
          <li class="icons-item">
             <a href="" class="icons-link" target="_blank" rel="noreferrer noopener" aria-label="Social media">
@@ -606,32 +560,19 @@
             </a>
          </li>
       </ul>
-
    </div>
-
-
    <!-- SCRIPT -->
-
    <!-- Inputmask script -->
    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
-
    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/jquery.inputmask.min.js"></script>
-
-
    <script src="./js/inputmask.js"></script>
-
    <!-- Modal window script -->
    <script src="./js/modal.js"></script>
-
-   <!-- Modal menu script -->
-
+   <!-- Mobile menu script -->
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"></script>
    <script defer src="js/mobile-menu.js"></script>
-
-
-
 </body>
 
 </html>
